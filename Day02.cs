@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using NUnit.Framework;
 
 namespace aoc2017
 {
@@ -52,20 +52,22 @@ namespace aoc2017
         }
     }
 
-
+    [TestFixture]
     internal class Day02Tests
     {
+        [Test]
         public void Test1_1()
         {
             var res = Day02.ComputeChecksum1(new [] { "5\t1\t9\t5", "7\t5\t3", "2\t4\t6\t8" });
-            Debug.Assert(res == 18);
+            Assert.AreEqual(18, res);
         }
 
 
+        [Test]
         public void Test2_1()
         {
             var res = Day02.ComputeChecksum2(new[] { "5\t9\t2\t8", "9\t4\t7\t3", "3\t8\t6\t5" });
-            Debug.Assert(res == 9);
+            Assert.AreEqual(9, res);
         }
     }
 }

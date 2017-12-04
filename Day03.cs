@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
+using NUnit.Framework;
 
 namespace aoc2017
 {
@@ -125,56 +125,64 @@ namespace aoc2017
         }
     }
 
-
+    [TestFixture]
     internal class Day03Tests
     {
+        [Test]
         public void Test1_1()
         {
             var res = Day03.ComputeDistanceToPort(1);
-            Debug.Assert(res == 0);
+            Assert.AreEqual(0, res);
         }
 
+        [Test]
         public void Test1_2()
         {
             var res = Day03.ComputeDistanceToPort(12);
-            Debug.Assert(res == 3);
+            Assert.AreEqual(3, res);
         }
 
+        [Test]
         public void Test1_3()
         {
             var res = Day03.ComputeDistanceToPort(23);
-            Debug.Assert(res == 2);
+            Assert.AreEqual(2, res);
         }
 
+        [Test]
         public void Test1_4()
         {
             var res = Day03.ComputeDistanceToPort(1024);
-            Debug.Assert(res == 31);
+            Assert.AreEqual(31, res);
         }
 
 
+        [Test]
         public void Test2_1()
         {
             var res = Day03.FirstValueWrittenLargerThan(2);
-            Debug.Assert(res == 2);
+            Assert.AreEqual(2, res);
         }
 
+        [Test]
         public void Test2_2()
         {
             var res = Day03.FirstValueWrittenLargerThan(3);
-            Debug.Assert(res == 4);
+            Assert.AreEqual(4, res);
         }
 
+        [Test]
         public void Test2_3()
         {
             var res = Day03.FirstValueWrittenLargerThan(58);
-            Debug.Assert(res == 59);
+            Assert.AreEqual(59, res);
         }
 
+        [Test]
         public void Test2_4()
         {
             var res = Day03.FirstValueWrittenLargerThan(748);
-            Debug.Assert(res == 806);
+            Assert.AreEqual(806, res);
         }
     }
 }

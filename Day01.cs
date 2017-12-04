@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using NUnit.Framework;
 
 namespace aoc2017
 {
@@ -58,62 +59,72 @@ namespace aoc2017
     }
 
 
+    [TestFixture]
     internal class Day01Tests
     {
+        [Test]
         public void Test1_1()
         {
             var res = Day01.ComputeCaptcha1("1122");
-            Debug.Assert(res == 3);
+            Assert.AreEqual(3, res);
         }
 
+        [Test]
         public void Test1_2()
         {
             var res = Day01.ComputeCaptcha1("1111");
-            Debug.Assert(res == 4);
+            Assert.AreEqual(4, res);
         }
 
+        [Test]
         public void Test1_3()
         {
             var res = Day01.ComputeCaptcha1("1234");
-            Debug.Assert(res == 0);
+            Assert.AreEqual(0, res);
         }
 
+        [Test]
         public void Test1_4()
         {
             var res = Day01.ComputeCaptcha1("91212129");
-            Debug.Assert(res == 9);
+            Assert.AreEqual(9, res);
         }
 
 
 
+        [Test]
         public void Test2_1()
         {
             var res = Day01.ComputeCaptcha2("1212");
-            Debug.Assert(res == 6);
+            Assert.AreEqual(6, res);
         }
 
+        [Test]
         public void Test2_2()
         {
             var res = Day01.ComputeCaptcha2("1221");
-            Debug.Assert(res == 0);
+            Assert.AreEqual(0, res);
         }
 
+        [Test]
         public void Test2_3()
         {
             var res = Day01.ComputeCaptcha2("123425");
-            Debug.Assert(res == 4);
+            Assert.AreEqual(4, res);
         }
 
+        [Test]
         public void Test2_4()
         {
             var res = Day01.ComputeCaptcha2("123123");
-            Debug.Assert(res == 12);
+            Assert.AreEqual(12, res);
         }
 
+        [Test]
         public void Test2_5()
         {
             var res = Day01.ComputeCaptcha2("12131415");
-            Debug.Assert(res == 4);
+            Assert.AreEqual(4, res);
         }
     }
 }
