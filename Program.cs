@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace aoc2017
 {
@@ -15,7 +11,8 @@ namespace aoc2017
             //Day03.Run();
             //Day04.Run();
             //Day05.Run();
-            Day06.Run();
+            //Day06.Run();
+            Day07.Run();
 
 
             Console.ReadLine();
